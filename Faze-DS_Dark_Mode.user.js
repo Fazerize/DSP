@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Faze - DS Dark Mode
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  -
 // @author       Fazerize
 // @run-at       document-idle
@@ -345,7 +345,6 @@
         border-color: #000000 #000000 #000000 #000000 !important;
         background-image: none !important;
     }
-
     .popup_menu {
         background-color: rgba(0, 0, 0, .6) !important;
         background-image: none !important;
@@ -354,6 +353,43 @@
         background-image: none !important;
         background-color: rgba(0, 0, 0, .5) !important;
     }
+    .village-note {
+        background-color: rgba(0, 0, 0, 0) !important;
+        border: 1px solid #000000 !important;
+    }
+    .village-note-head {
+        border-bottom: 1px solid #000000 !important;
+    }
+    .gate_container {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+    }
+    .gate li {
+        border: 1px !important;
+        border-bottom-style: dotted !important;
+        border-top-style: dotted !important;
+        border-left-style: dotted !important;
+        border-right-style: dotted !important;
+    }
+    .filter:hover {
+        background-color: rgba(0, 0, 0, .1) !important;
+    }
+    .ra-single-village-snipe {
+        background: rgba(0, 0, 0, .3) !important;
+    }
+    #troop_template_list ul li:nth-child(even) a {
+        background: rgba(0, 0, 0, .3) !important;
+        border-bottom: 0.5px !important;
+        border-bottom-style: solid !important;
+    }
+    #troop_template_list ul li:nth-child(odd) a {
+        background: rgba(0, 0, 0, .5) !important;
+        border-bottom: 0.5px !important;
+        border-bottom-style: solid !important;
+    }
+    .inactive, .inactive:hover {
+        color: #CBCBCB !important;
+    }
+
 
     /* BACKGROUND */
      body {
