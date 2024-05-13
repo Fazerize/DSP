@@ -398,6 +398,17 @@
     #village_colors table {
         background-color: rgba(0, 0, 0, .3) !important;
     }
+    .popup_box_content div {
+        background-color: rgba(0, 0, 0, .3) !important;
+        background-image: none !important;
+    }
+    .ui-menu-item {
+        color: #ffffff;
+    }
+    #color_picker_popup {
+        background-color: rgba(0, 0, 0, .3) !important;
+        background-image: none !important;
+    }
 
 
     /* BACKGROUND */
