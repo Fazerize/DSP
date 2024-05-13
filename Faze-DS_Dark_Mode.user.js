@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Faze - DS Dark Mode
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  -
 // @author       Fazerize
 // @run-at       document-idle
@@ -394,6 +394,9 @@
     }
     .reward-tab-content {
         background: rgba(0, 0, 0, .3) !important;
+    }
+    #village_colors table {
+        background-color: rgba(0, 0, 0, .3) !important;
     }
 
 
