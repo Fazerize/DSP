@@ -389,6 +389,12 @@
     .inactive, .inactive:hover {
         color: #CBCBCB !important;
     }
+    .reward-descriptions {
+        background: rgba(0, 0, 0, .3) !important;
+    }
+    .reward-tab-content {
+        background: rgba(0, 0, 0, .3) !important;
+    }
 
 
     /* BACKGROUND */
