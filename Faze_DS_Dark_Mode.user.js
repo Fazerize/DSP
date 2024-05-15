@@ -1,14 +1,13 @@
 // ==UserScript==
 // @name         Faze - DS Dark Mode
-// @namespace    http://tampermonkey.net/
-// @version      0.5
-// @description  -
-// @author       Fazerize
+// @version      0.6
+// @author       Faze
+// @description  Dark mode for Die Stämm
 // @run-at       document-idle
-// @downloadURL  https://github.com/fazerize/DSP/raw/main/Faze_DS_Dark_Mode.user.js
-// @updateURL    https://github.com/fazerize/DSP/raw/main/Faze_DS_Dark_Mode.user.js
-// @icon         https://avatars.githubusercontent.com/u/166784865?v=4
 // @match        https://*.die-staemme.de/*
+// @downloadURL  https://github.com/fazerize/DSP/raw/main/Faze-DSDarkMode.user.js
+// @updateURL    https://github.com/fazerize/DSP/raw/main/Faze-DSDarkMode.user.js
+// @icon         https://avatars.githubusercontent.com/u/166784865?v=4
 // ==/UserScript==
 
 (function() {
