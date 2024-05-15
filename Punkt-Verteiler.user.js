@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         Punkt - Verteiler
-// @namespace    http://tampermonkey.net/
-// @version      1.7
-// @description  -
-// @author       Fazerize
-// @downloadURL  https://github.com/fazerize/DSP/raw/main/Punkt-Verteiler.user.js
-// @updateURL    https://github.com/fazerize/DSP/raw/main/Punkt-Verteiler.user.js
-// @icon         https://avatars.githubusercontent.com/u/166784865?v=4
+// @version      1.8
+// @author       Faze
+// @description  Adressbuch für DS
+// @run-at       document-idle
 // @match        https://*.die-staemme.de/game.php?*screen=mail*mode=forward*
 // @match        https://*.die-staemme.de/game.php?*screen=mail*mode=new*
 // @match        https://*.die-staemme.de/game.php?*screen=report*mode=process_reports*
 // @match        https://*.die-staemme.de/game.php?*screen=report*mode=forward*
+// @downloadURL  https://github.com/fazerize/DSP/raw/main/Punkt-Verteiler.user.js
+// @updateURL    https://github.com/fazerize/DSP/raw/main/Punkt-Verteiler.user.js
+// @icon         https://avatars.githubusercontent.com/u/166784865?v=4
 // ==/UserScript==
 
 const exceptName = document.getElementById("menu_counter_profile").parentElement.nextElementSibling.querySelectorAll("a")[0].innerHTML;

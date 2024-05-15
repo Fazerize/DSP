@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Punkt - Angriffswarner
-// @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  -
-// @author       Fazerize
+// @version      1.2
+// @author       Faze
+// @description  Meldung bei Angriffen auf Spieler aus dem Adressbuch
+// @run-at       document-idle
+// @match        https://*.die-staemme.de/game.php?*screen=place*try=confirm*
 // @downloadURL  https://github.com/fazerize/DSP/raw/main/Punkt-Angriffswarner.user.js
 // @updateURL    https://github.com/fazerize/DSP/raw/main/Punkt-Angriffswarner.user.js
 // @icon         https://avatars.githubusercontent.com/u/166784865?v=4
-// @match        https://*.die-staemme.de/game.php?*screen=place*try=confirm*
 // ==/UserScript==
 
 var win = typeof unsafeWindow != 'undefined' ? unsafeWindow : window;
