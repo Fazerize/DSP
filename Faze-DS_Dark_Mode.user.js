@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Faze - DS Dark Mode
-// @version      0.7
+// @version      0.8
 // @author       Faze
 // @description  Dark mode for Die Stämm
 // @run-at       document-idle
@@ -420,6 +420,23 @@
     }
     .post_thanks {
         border-top: #ffffff 1px solid !important;
+    }
+    .ally-stronghold-bar {
+        background: none !important;
+        border: 1px solid #ffffff !important;
+    }
+    .stronghold-bar-content {
+        border-right: #ffffff 1px solid !important;
+    }
+    .stronghold-stats {
+        background: none !important;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+    div.vis {
+        border: 1px solid #ffffff !important;
+    }
+    .unit-input-faded a {
+        color: grey !important;
     }
 
 
