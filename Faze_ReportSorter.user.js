@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Faze - Report Sorter
-// @version      0.3
+// @version      0.4
 // @author       Faze
 // @description  Sortiert Berichte
 // @run-at       document-idle
@@ -85,6 +85,33 @@ function sortReports(name) {
 }
 
 if (location.href.includes("view=") === false) {
+  //Buttonleiste in Berichte im Kopf verschieben
+  const reportTable = document.getElementById('report_list');
+
+  if(location.href.includes('group_id=')) {
+      var reportActionForm = document.getElementsByTagName('form')[7];
+  } else if(location.href.includes('mode=all') || location.href.includes('mode=attack') || location.href.includes('mode=defense')) {
+      var reportActionForm = document.getElementsByTagName('form')[7];
+  } else if(location.href.includes('mode=trade') || location.href.includes('mode=support')) {
+      var reportActionForm = document.getElementsByTagName('form')[4];
+  } else if(location.href.includes('mode=') || location.href.includes('mode=forwarded')) {
+      var reportActionForm = document.getElementsByTagName('form')[2];
+  } else {
+      var reportActionForm = document.getElementsByTagName('form')[7];
+  }
+
+  const rowHtml = reportActionForm.getElementsByTagName('table')[1].cloneNode(true);
+
+  // "Select all" Checkbox + Label
+  const tableReports = reportActionForm.getElementsByTagName('table')[0];
+  const cbxSelectAllHtml = document.getElementById('select_all').cloneNode(true);
+  const cbxSelectAllLabel = reportTable.rows[reportTable.rows.length -1].getElementsByTagName('label')[0].cloneNode(true);
+
+  // Änderungen am DOM vornehmen
+  tableReports.before(rowHtml);
+  tableReports.before(cbxSelectAllHtml);
+  tableReports.before(cbxSelectAllLabel);
+
   [
     "Raubzug löschen",
     "Handel löschen",
