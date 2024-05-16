@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Faze - DS Dark Mode
-// @version      0.6
+// @version      0.7
 // @author       Faze
 // @description  Dark mode for Die Stämm
 // @run-at       document-idle
@@ -402,11 +402,24 @@
         background-image: none !important;
     }
     .ui-menu-item {
-        color: #ffffff;
+        color: #ffffff !important;
     }
     #color_picker_popup {
         background-color: rgba(0, 0, 0, .3) !important;
         background-image: none !important;
+    }
+    .bbcodetable {
+        background: rgba(0, 0, 0, 0.2) !important;
+        border: #ffffff 1px solid !important;
+    }
+    .post {
+        border: 1px solid #ffffff !important;
+    }
+    .igmline {
+        border-bottom: #ffffff 1px solid !important;
+    }
+    .post_thanks {
+        border-top: #ffffff 1px solid !important;
     }
 
 
