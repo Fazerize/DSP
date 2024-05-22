@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Faze - Report Sorter
-// @version      0.4
+// @version      0.5
 // @author       Faze
 // @description  Sortiert Berichte
 // @run-at       document-idle
@@ -44,7 +44,14 @@ function sortReports(name) {
       .prev()
       .find("input")
       .prop("checked", true);
-    $('.quickedit-label:contains("schickt die Unterstützung")')
+      $('.quickedit-label:contains("schickt die Unterstützung")')
+      .closest(".quickedit.report-title")
+      .parent()
+      .prev()
+      .find("input")
+      .prop("checked", true);
+    $(".btn-cancel").click();
+    $('.quickedit-label:contains("Stammesunterstützung")')
       .closest(".quickedit.report-title")
       .parent()
       .prev()
@@ -60,6 +67,21 @@ function sortReports(name) {
       .find("input")
       .prop("checked", true);
     $('.quickedit-label:contains("Warteschlange unterbrochen")')
+      .closest(".quickedit.report-title")
+      .parent()
+      .prev()
+      .find("input")
+      .prop("checked", true);
+    $(".btn-cancel").click();
+  }
+  if (name == "Sonstiges löschen") {
+    $('.quickedit-label:contains("Adelsreservierung")')
+      .closest(".quickedit.report-title")
+      .parent()
+      .prev()
+      .find("input")
+      .prop("checked", true);
+    $('.quickedit-label:contains("Reserviertes Dorf")')
       .closest(".quickedit.report-title")
       .parent()
       .prev()
@@ -117,6 +139,7 @@ if (location.href.includes("view=") === false) {
     "Handel löschen",
     "Unterstützung löschen",
     "AM löschen",
+    "Sonstiges löschen",
     "Weitergeleitet archivieren",
   ].forEach((name) => {
     let button = $(
