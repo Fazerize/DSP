@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Faze - Attack Organizer
-// @version      1.8
+// @version      1.9
 // @author       Faze
 // @description  Attack Organizer with colors
 // @run-at       document-idle
