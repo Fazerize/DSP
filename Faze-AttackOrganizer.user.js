@@ -29,7 +29,7 @@ var settings = {
   4: ["[Readel-Off]", "R-Off", "dyellow", "white"],
   5: [" | Getabbt", "Tab", "orange", "black"],
   6: [" | Geflext", "Flex", "cyan", "black"],
-  7: [" | Bunk", "Bunker", "blue", "white"],
+  7: [" | Bunker", "Bunk", "blue", "white"],
   8: [" | DONE", "DONE", "green", "white"],
 };
 //{ColorName: ['theme color 1', 'theme color 2']}
