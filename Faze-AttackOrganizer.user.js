@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Faze - Attack Organizer
-// @version      1.7
+// @version      1.8
 // @author       Faze
 // @description  Attack Organizer with colors
 // @run-at       document-idle
@@ -26,7 +26,7 @@ var settings = {
   1: ["[mögl.Off]", "Off", "red", "white"],
   2: ["[Fake]", "Fake", "pink", "black"],
   3: ["[Readel]", "Readel", "yellow", "black"],
-  4: ["[Readel-Off]", "R-Off", "lime", "black"],
+  4: ["[Readel-Off]", "R-Off", "dyellow", "white"],
   5: [" | Getabbt", "Tab", "orange", "black"],
   6: [" | Geflext", "Flex", "cyan", "black"],
   7: [" | Bunk", "Bunker", "blue", "white"],
