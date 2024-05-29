@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Faze - Attack Organizer
-// @version      1.9
+// @version      2.0
 // @author       Faze
 // @description  Attack Organizer with colors
 // @run-at       document-idle
@@ -145,8 +145,9 @@ function iTshort(nr, line) {
   if (buttonNames) html += '<td><span style="float: right;">';
   buttonIcons.forEach(function (nome, num) {
     if (
-      buttonNames[num] == " | DONE" ||
-      buttonNames[num] == " | Getabbt"
+      buttonNames[num] == " | Bunker" ||
+      buttonNames[num] == " | Getabbt" ||
+      buttonNames[num] == " | DONE"
     ) {
       html +=
         '<button type="button" id="opt' +
@@ -284,7 +285,10 @@ if (
         } else if (attack_layout === "column") {
           $(line)
             .find("td:eq(0)")
-            .attr("style", "background: " + colors["white"][1] + " !important;");
+            .attr(
+              "style",
+              "background: " + colors["white"][1] + " !important;"
+            );
           $(line)
             .find("a:eq(0)")
             .attr(
@@ -296,16 +300,6 @@ if (
     }
   });
 } else {
-  const table = document.querySelector("#incomings_table");
-  const lastRow = table.rows[table.rows.length - 1];
-
-  // Create a new row to insert at the top of the table
-  const newRow = document.createElement("tr");
-  newRow.innerHTML = lastRow.innerHTML;
-
-  // Insert the new row at the top of the table
-  table.insertBefore(newRow, table.firstChild);
-
   $("#incomings_table tr.nowrap").each(function (nr, line) {
     if (!isSupport(line)) {
       iTshort(nr, line, true);
@@ -362,7 +356,10 @@ if (
         } else if (attack_layout === "column") {
           $(line)
             .find("td:eq(0)")
-            .attr("style", "background: " + colors["white"][1] + " !important;");
+            .attr(
+              "style",
+              "background: " + colors["white"][1] + " !important;"
+            );
           $(line)
             .find("a:eq(0)")
             .attr(
