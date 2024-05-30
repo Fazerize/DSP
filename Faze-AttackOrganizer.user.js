@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Faze - Attack Organizer
-// @version      2.0
+// @version      2.1
 // @author       Faze
 // @description  Attack Organizer with colors
 // @run-at       document-idle
@@ -23,14 +23,15 @@ var attack_layout = "column"; //Possible layouts: 'column', 'line', 'nothing'
 //{Number: ['Command name', 'button name', 'button color', 'text color']}
 var settings = {
   0: ["???", "???", "black", "white"],
-  1: ["[mögl.Off]", "Off", "red", "white"],
-  2: ["[Fake]", "Fake", "pink", "black"],
-  3: ["[Readel]", "Readel", "yellow", "black"],
-  4: ["[Readel-Off]", "R-Off", "dyellow", "white"],
-  5: [" | Getabbt", "Tab", "orange", "black"],
-  6: [" | Geflext", "Flex", "cyan", "black"],
-  7: [" | Bunker", "Bunk", "blue", "white"],
-  8: [" | DONE", "DONE", "green", "white"],
+  1: ["LZ?", "LZ?", "brown", "white"],
+  2: ["[mögl.Off]", "Off", "red", "white"],
+  3: ["[Fake]", "Fake", "pink", "black"],
+  4: ["[Readel]", "Readel", "yellow", "black"],
+  5: ["[Readel-Off]", "R-Off", "dyellow", "white"],
+  6: [" | Getabbt", "Tab", "orange", "black"],
+  7: [" | Geflext", "Flex", "cyan", "black"],
+  8: [" | Bunker", "Bunk", "blue", "white"],
+  9: [" | DONE", "DONE", "green", "white"],
 };
 //{ColorName: ['theme color 1', 'theme color 2']}
 var colors = {
@@ -48,26 +49,9 @@ var colors = {
   pink: ["#ff69b4", "#ff69b4"],
   cyan: ["#00FFFF", "#00FFFF"],
   dyellow: ["#9C8700", "#9C8700"],
+  brown: ["#6F4E37", "#6F4E37"],
 };
 
-/*******************QUICBAR ENTRY*************
-// name         Attack Organizer with colors
-// version      3.0
-// author       fmthemaster, Mau Maria (V3.0)
-// author       PhilipsNostrum and Kirgonix (V2.0)
-// author       Diogo Rocha and Bernas (V1.0)
-//Runs in [screen=overview, screeen=place, screen=commands&mode=incomings]
-var font_size = 8;
-var attack_layout = 'column'; //Possible layouts: 'column', 'line', 'nothing'
-
-//{Number: ['Command name', 'button name', 'button color', 'text color']}
-var settings= {0:['[Dead]','D', 'green', 'white'], 1:['[Support]','S', 'lime', 'white'], 2:['[Dodged]','D!', 'orange', 'white'], 3:['[Dodge]','D', 'dorange', 'white'], 4:['[Reconquered]','R!', 'gray', 'white'], 5:['[Reconquer]','R', 'white', 'black'], 6:['[Sniped]','S!', 'lblue', 'black'], 7:['[Snipe]','S', 'blue', 'white'], 8:['[toFUBR]','F', 'black', 'white'], 9:['[FUBRdone]','F!', 'white', 'black'], 10:['[Fake]','Fk', 'pink', 'black'], 11:[' | Stay Alert','A!', 'yellow', 'black']};
-
-//{ColorName: ['theme color 1', 'theme color 2']}
-var colors = {'red':['#e20606', '#b70707'], 'green':['#31c908', '#228c05'], 'blue':['#0d83dd', '#0860a3'], 'yellow':['#ffd91c', '#e8c30d'], 'orange':['#ef8b10', '#d3790a'], 'lblue':['#22e5db', '#0cd3c9'], 'lime':['#ffd400', '#ffd400'], 'white':['#ffffff', '#dbdbdb'], 'black':['#000000', '#2b2b2b'], 'gray':['#adb6c6', '#828891'], 'dorange':['#ff0000', '#ff0000'], 'pink':['#ff69b4', '#ff69b4']}
-$.getScript('https://gitcdn.xyz/cdn/filipemiguel97/076df367a5f0f3272abc90136749c121/raw/AttackRenamerColors.js')
-****************************************/
-/******************PROGRAM CODE*********/
 
 function checkColors(color) {
   if (!colors[color]) {
@@ -285,10 +269,7 @@ if (
         } else if (attack_layout === "column") {
           $(line)
             .find("td:eq(0)")
-            .attr(
-              "style",
-              "background: " + colors["white"][1] + " !important;"
-            );
+            .attr("style", "background: " + colors["white"][1] + " !important;");
           $(line)
             .find("a:eq(0)")
             .attr(
@@ -356,10 +337,7 @@ if (
         } else if (attack_layout === "column") {
           $(line)
             .find("td:eq(0)")
-            .attr(
-              "style",
-              "background: " + colors["white"][1] + " !important;"
-            );
+            .attr("style", "background: " + colors["white"][1] + " !important;");
           $(line)
             .find("a:eq(0)")
             .attr(
