@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Punkt - Verteiler
-// @version      1.8
+// @version      2.0
 // @author       Faze
 // @description  Adressbuch für DS
 // @run-at       document-idle
@@ -12,29 +12,3 @@
 // @updateURL    https://github.com/fazerize/DSP/raw/main/Punkt-Verteiler.user.js
 // @icon         https://avatars.githubusercontent.com/u/166784865?v=4
 // ==/UserScript==
-
-const exceptName = document.getElementById("menu_counter_profile").parentElement.nextElementSibling.querySelectorAll("a")[0].innerHTML;
-
-var win = typeof unsafeWindow != 'undefined' ? unsafeWindow : window;
-win.$.ajaxSetup({ cache: true });
-
-window.onload = function() {
-    'use strict';
-
-    var div = document.createElement('div');
-    div.innerHTML = "<button class='btn' id='btnaddress'>Stammesverteiler</button>";
-    var collection = $('#content_value')[0].children[1].children[0].children[0].children[1];
-    collection.insertBefore(div, collection.children[0]);
-}();
-
-document.querySelector("#btnaddress").addEventListener("click", function(event) {
-    fetch("https://faze.live/224adressbuch/fetch_player.php")
-        .then(response => response.json())
-        .then(data => {
-        const spielernamen = data
-        .filter(item => item.spielername.toLowerCase() !== exceptName.toLowerCase())
-        .map(item => item.spielername)
-        .join(";");
-        document.querySelector("#to").value = spielernamen;
-    });
-});
